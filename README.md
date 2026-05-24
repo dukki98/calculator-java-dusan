@@ -12,16 +12,21 @@
 * Calculator.java – 18 – The method name "ToString" violates Java naming conventions (should start with a lowercase letter).
 * Calculator.java – 19 – Inefficient string concatenation ("" + ...) creates unnecessary objects in memory.
 * Calculator.java – 24 – The method name "Run" violates Java naming conventions (should start with a lowercase letter).
-* Calculator.java – 33 – Potential StringIndexOutOfBoundsException if the passed expression string is empty.
-* Calculator.java – 39 – Potential regex error; special characters like '+' and '*' are not escaped inside the split() method.
-* Calculator.java – 43 – The loop skips checking the last character of the string due to the "length() - 1" condition.
-* Calculator.java – 44 – Code duplication and complex logical checks for operators instead of using a helper function.
+* Calculator.java – 32 – Potential StringIndexOutOfBoundsException if the passed expression string is empty.
+* Calculator.java – 34 – Magic number zero ('0 + expression') implicitly converted to string, creating redundant runtime objects.
+* Calculator.java – 37 – Potential regex error; special characters like '+' and '*' inside Operations.ToString() are not escaped before being passed to split().
+* Calculator.java – 41 – The loop skips checking the very last character of the string due to the "length() - 1" condition.
+* Calculator.java – 42 – Code duplication and complex logical checks for operators inside the loop instead of a shared helper validation function.
 * Calculator.java – 63 – Bad practice of catching a generic Exception instead of a specific NumberFormatException.
-* Calculator.java – 70 – The method name "Calculate" violates Java naming conventions (should start with a lowercase letter).
-* Calculator.java – 77 – Unnecessary initialization and use of the "+=" operator on the local variable "result".
-* Calculator.java – 95 – Missing division-by-zero check, which can cause uncontrolled Infinity or NaN values.
-* Calculator.java – 113 – Heavy code duplication across redundant recursive calls for each individual arithmetic operation.
-
+* Calculator.java – 74 – The method name "Calculate" violates Java naming conventions (should start with a lowercase letter).
+* Calculator.java – 81 – Dead code / Unnecessary initialization of local variable "result" combined with an immediate "+=" override.
+* Calculator.java – 98 – Missing division-by-zero validation logic, allowing uncontrolled Infinity or NaN results.
+* Calculator.java – 110 – Heavy code duplication across redundant recursive paths for individual arithmetic handling blocks.
+* Calculator.java – 111 – Redundant use of "+=" operator on a freshly initialized variable across all operation blocks.
+* Calculator.java – 118 – Unbounded recursion increases the risk of a StackOverflowError on long expressions.
+* Calculator.java – 137 – Flawed logic for mixed addition/subtraction index checking, breaking standard left-to-right math evaluation rules.
+* Calculator.java – 162 – Redundant conditional blocks that copy-paste array mutation logic unnecessarily.
+* 
 ### Start.java
 * Start.java – 6 – The local variable "Expression" violates Java naming conventions (should start with a lowercase letter).
 * Start.java – 12 – Resource leak / Performance issue. The Scanner object is reinstantiated inside the while-loop on every iteration instead of being created once outside the loop.
