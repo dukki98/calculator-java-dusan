@@ -1,9 +1,9 @@
 # Project: Calculator Java
 
 ## Code Metrics
-* **Total Project LOC (Lines of Code):** 153 lines.
-* **Calculator.java LOC:** 134 lines.
-* **Start.java LOC:** 19 lines.
+* **Total Project LOC (Lines of Code):** 214 (153) lines.
+* **Calculator.java LOC:** 188 (134) lines.
+* **Start.java LOC:** 26 (19) lines.
 
 ## Static Code Analysis Report
 
